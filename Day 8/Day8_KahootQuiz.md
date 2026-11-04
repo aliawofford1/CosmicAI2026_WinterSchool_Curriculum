@@ -110,20 +110,22 @@ D. To evaluate a trained model without using labels
 
 ** Solutions Key ** 
 
+## Answer Key and Explanations
 
-Question	Correct answer	Explanation
-1	B	A tensor is a multidimensional data structure. Scalars, vectors, and matrices can all be represented as tensors.
-2	A	A tensor's shape describes its size along each dimension. For example, (3, 4) represents a two-dimensional tensor with three rows and four columns.
-3	C	torch.randn(3, 4) creates a 3 × 4 tensor containing values sampled from a standard normal distribution.
-4	B	.view() changes the shape of a tensor while preserving its elements. The total number of elements must remain the same.
-5	A	torch.cat() concatenates tensors along a specified dimension. Their sizes must match in the other dimensions.
-6	C	Methods ending with an underscore generally modify the existing tensor in place rather than producing a separate result.
-7	B	requires_grad=True enables PyTorch to track operations on a tensor so gradients can be calculated using automatic differentiation.
-8	C	A computation graph represents the operations and dependencies connecting inputs to outputs. PyTorch uses this graph during backpropagation.
-9	A	.backward() computes gradients through the computation graph. An optimizer is responsible for subsequently updating model parameters.
-10	C	torch.no_grad() temporarily disables gradient tracking, commonly during model evaluation or inference.
-11	B	GPUs are designed to perform large numbers of numerical operations in parallel, making them useful for tensor computations and neural network training.
-12	A	nn.Module is the base class used to define PyTorch neural network models, including their layers and forward computations.
-13	B	Nonlinear activation functions such as Tanh allow neural networks to learn relationships that cannot be represented by a single linear transformation.
-14	A	A loss function quantifies prediction error, providing the objective that the model attempts to minimize during training.
-15	C	SGD uses gradients to update model parameters in a direction intended to reduce the loss.
+| Question | Correct Answer | Explanation |
+|:---:|:---:|---|
+| 1 | **B** | A tensor is a multidimensional data structure used to store numerical values. Scalars, vectors, and matrices can all be represented as tensors. |
+| 2 | **A** | A tensor's shape describes its size along each dimension. For example, `(3, 4)` represents a two-dimensional tensor with three rows and four columns. |
+| 3 | **C** | `torch.randn(3, 4)` creates a 3 × 4 tensor containing random values sampled from a standard normal distribution. |
+| 4 | **B** | The `.view()` method reshapes a tensor without changing its elements. The total number of elements must remain the same. |
+| 5 | **A** | `torch.cat()` concatenates tensors along a specified dimension. Tensor sizes must match along all other dimensions. |
+| 6 | **C** | Methods ending with an underscore, such as `add_()`, generally modify the existing tensor in place rather than creating a new tensor. |
+| 7 | **B** | `requires_grad=True` enables PyTorch to track operations on a tensor so gradients can be calculated using automatic differentiation. |
+| 8 | **C** | A computation graph represents the mathematical operations and dependencies connecting inputs to outputs. PyTorch uses this graph during backpropagation. |
+| 9 | **A** | Calling `.backward()` on a scalar output computes gradients through the computation graph. The optimizer subsequently uses these gradients to update model parameters. |
+| 10 | **C** | `torch.no_grad()` temporarily disables gradient tracking, commonly during model evaluation or inference. |
+| 11 | **B** | GPUs perform many numerical operations in parallel, making them useful for tensor computations and neural network training. |
+| 12 | **A** | `nn.Module` is the base class used to define PyTorch neural network models, including their layers and forward computations. |
+| 13 | **B** | Nonlinear activation functions such as `Tanh` allow neural networks to represent complex relationships that cannot be modeled using only linear transformations. |
+| 14 | **A** | A loss function measures the difference between model predictions and target values, providing an objective to minimize during training. |
+| 15 | **C** | Stochastic Gradient Descent (SGD) uses gradient information to update model parameters in a direction intended to reduce the loss. |

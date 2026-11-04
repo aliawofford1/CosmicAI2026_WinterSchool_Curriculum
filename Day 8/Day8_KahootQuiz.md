@@ -108,7 +108,6 @@ D. To evaluate a trained model without using labels
 
 
 
-** Solutions Key ** 
 
 ## Answer Key and Explanations
 

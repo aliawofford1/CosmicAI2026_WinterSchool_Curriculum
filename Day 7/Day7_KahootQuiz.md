@@ -1,3 +1,4 @@
+Lesson 7c & 8a  Bayesian Statistics and Intro to Scikit-Learn Quiz 
 
 1. What is the primary purpose of Bayes' theorem in statistical analysis?
 A.  To calculate the mean and standard deviation of a dataset.

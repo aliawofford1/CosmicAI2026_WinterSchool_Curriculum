@@ -1,104 +1,129 @@
-## Lesson 8: Scikit-Learn and PyTorch Quiz
+## Lesson 8: Intro to PyTorch Quiz
 
 ### Multiple Choice Questions
+1. What is a tensor in PyTorch?
 
-- What is Scikit-Learn primarily known for?  
-    a) A library for data visualization.  
-    b) A popular library for implementing machine learning algorithms.  
-    c) A framework for web development.  
-    d) A tool for deep learning model deployment.
-- In Scikit-Learn, how is data typically structured for machine learning models?  
-    a) As a one-dimensional list.  
-    b) As a table (two-dimensional array) where rows are observations and columns are features.  
-    c) As a nested dictionary.  
-    d) As a graph structure.
-- Which of the following is a key characteristic of Scikit-Learn's API?  
-    a) It is highly inconsistent across different models.  
-    b) It requires manual implementation of algorithms.  
-    c) It offers an intuitive and consistent interface for various models.  
-    d) It is primarily designed for deep learning.
-- What does an "Estimator" in Scikit-Learn refer to?  
-    a) A function used for data cleaning.  
-    b) An object that learns from data (e.g., a classification or regression model).  
-    c) A utility for loading datasets.  
-    d) A method for evaluating model performance.
-- What is a "feature matrix" in Scikit-Learn terminology?  
-    a) A vector containing the target labels.  
-    b) A 2D array where rows represent individual samples and columns represent features.  
-    c) A list of model parameters.  
-    d) A measure of model accuracy.
-- Which of the following is an alternative machine learning framework to PyTorch, as mentioned in the notebooks?  
-    a) NumPy  
-    b) Pandas  
-    c) TensorFlow  
-    d) Matplotlib
-- What is the fundamental data structure in PyTorch?  
-    a) DataFrame  
-    b) Array  
-    c) Tensor  
-    d) List
-- What is the primary purpose of the autograd package in PyTorch?  
-    a) To automatically optimize code for faster execution.  
-    b) To automatically differentiate all operations on Tensors, enabling backpropagation.  
-    c) To automatically handle data loading and preprocessing.  
-    d) To automatically select the best model for a given dataset.
-- If x.requires_grad = True for a PyTorch Tensor x, what does this imply?  
-    a) The Tensor x can only be used for inference, not training.  
-    b) Gradients will be computed for x during the backward pass.  
-    c) The Tensor x is stored on the GPU.  
-    d) The Tensor x is immutable.
-- What is torch.nn.Module primarily used for in PyTorch?
+A. A function used exclusively to train neural networks
+B. A multidimensional data structure that stores numerical values
+C. An algorithm used to calculate model accuracy
+D. A type of optimizer used to update weights
 
-a) Defining optimization algorithms.  
-b) Representing neural network layers and models.  
-c) Performing tensor operations.  
-d) Visualizing training progress.
+2. What does the shape of a tensor describe?
 
-- What is the role of an "optimizer" in a PyTorch neural network training process?  
-    a) To define the network architecture.  
-    b) To calculate the loss between predictions and true labels.  
-    c) To update the model's parameters based on gradients to minimize the loss.  
-    d) To load and preprocess the training data.
-- Which function is used to convert a PyTorch Tensor to a NumPy array?  
-    a) tensor.to_numpy()  
-    b) tensor.detach().numpy()  
-    c) numpy(tensor)  
-    d) tensor.as_array()
-- In machine learning, what does the "target vector" (or "response vector") typically represent?  
-    a) The input features for a model.  
-    b) The labels or dependent variables that the model aims to predict.  
-    c) The performance metrics of the model.  
-    d) The unique identifiers for each data point.
-- What does the fit() method do in Scikit-Learn's Estimator API?  
-    a) It applies the learned model to new data.  
-    b) It transforms the data into a new representation.  
-    c) It trains the model using the provided training data.  
-    d) It evaluates the model's performance.
-- What is one of the key benefits of using TensorBoard with PyTorch?  
-    a) It automates model deployment.  
-    b) It helps visualize training progress and identify issues like overfitting.  
-    c) It performs automatic hyperparameter tuning.  
-    d) It converts PyTorch models to other frameworks.
+A. The number of dimensions and the size of each dimension
+B. The numerical values stored in the tensor
+C. The data type of the tensor
+D. Whether the tensor requires gradients
 
-  ## Solutions Key **
+3. What does torch.randn(3, 4) create?
 
-  
+A. A tensor containing 12 zeros
+B. A tensor containing the integers 3 and 4
+C. A 3 × 4 tensor containing random values from a standard normal distribution
+D. A 4 × 3 tensor containing random values between 0 and 1
 
-1 b) A popular library for implementing machine learning algorithms.
-2 b) As a table (two-dimensional array) where rows are observations and columns are features.
-3 c) It offers an intuitive and consistent interface for various models.
-4 b) An object that learns from data (e.g., a classification or regression model).
-5 b) A 2D array where rows represent individual samples and columns represent features.
-6 c) TensorFlow
-7 c) Tensor
-8 b) To automatically differentiate all operations on Tensors, enabling backpropagation.
-9 b) Gradients will be computed for x during the backward pass.
-10 b) Representing neural network layers and models.
-11 c) To update the model's parameters based on gradients to minimize the loss.
-12 b) tensor.detach().numpy()
-13 b) The labels or dependent variables that the model aims to predict.
-14 c) It trains the model using the provided training data.
-15 b) It helps visualize training progress and identify issues like overfitting.
+4. What is the primary purpose of the .view() method?
+
+A. To display a tensor as a graph
+B. To reshape a tensor without changing its elements
+C. To convert a tensor into a Python list
+D. To calculate the gradient of a tensor
+
+5. What is the purpose of torch.cat()?
+
+A. To combine tensors along a specified dimension
+B. To multiply two matrices
+C. To calculate the mean of a tensor
+D. To remove dimensions from a tensor
+
+6. In PyTorch, what does the underscore in a method such as add_() generally indicate?
+
+A. The method calculates a gradient
+B. The method creates a new tensor on the GPU
+C. The method performs an operation in place
+D. The method converts a tensor into a NumPy array
+
+7. What does requires_grad=True tell PyTorch to do?
+
+A. Automatically train the neural network
+B. Track operations so gradients can be computed
+C. Convert the tensor to a floating-point number
+D. Prevent the tensor from being modified
+
+8. What is a computation graph?
+
+A. A visual representation of model accuracy over time
+B. A table containing training data and labels
+C. A record of operations and dependencies used in a calculation
+D. A list of hyperparameters used to train a model
+
+9. What happens when .backward() is called on a scalar output that tracks gradients?
+
+A. PyTorch calculates gradients through the computation graph
+B. PyTorch automatically updates every model parameter
+C. PyTorch deletes the computation graph and its input tensors
+D. PyTorch converts the output into a NumPy array
+
+10. What is the purpose of torch.no_grad()?
+
+A. To permanently disable gradients for every tensor
+B. To initialize model parameters with zeros
+C. To temporarily prevent PyTorch from tracking gradient-related operations
+D. To calculate gradients without storing them
+
+11. Why are GPUs useful for deep learning?
+
+A. They eliminate the need for training data
+B. They can efficiently perform many numerical operations in parallel
+C. They automatically select the best neural network architecture
+D. They guarantee that a model will achieve higher accuracy
+
+12. What is the purpose of nn.Module in PyTorch?
+
+A. To provide a base class for defining neural network models
+B. To convert tensors into NumPy arrays
+C. To split a dataset into training and testing subsets
+D. To automatically download pretrained models
+
+13. What is the purpose of a nonlinear activation function such as Tanh?
+
+A. To calculate the number of model parameters
+B. To introduce nonlinearity so a network can represent complex relationships
+C. To divide a dataset into batches
+D. To save the model after training
+
+14. What is the role of a loss function during neural network training?
+
+A. To measure the difference between model predictions and target values
+B. To determine which device should execute the model
+C. To specify the number of training examples in a batch
+D. To convert a tensor into a different shape
+
+15. What is the primary purpose of an optimizer such as stochastic gradient descent (SGD)?
+
+A. To create random training data
+B. To determine the input dimensions of a neural network
+C. To update model parameters using gradient information
+D. To evaluate a trained model without using labels
 
 
 
+** Solutions Key ** 
+
+
+Question	Correct answer	Explanation
+1	B	A tensor is a multidimensional data structure. Scalars, vectors, and matrices can all be represented as tensors.
+2	A	A tensor's shape describes its size along each dimension. For example, (3, 4) represents a two-dimensional tensor with three rows and four columns.
+3	C	torch.randn(3, 4) creates a 3 × 4 tensor containing values sampled from a standard normal distribution.
+4	B	.view() changes the shape of a tensor while preserving its elements. The total number of elements must remain the same.
+5	A	torch.cat() concatenates tensors along a specified dimension. Their sizes must match in the other dimensions.
+6	C	Methods ending with an underscore generally modify the existing tensor in place rather than producing a separate result.
+7	B	requires_grad=True enables PyTorch to track operations on a tensor so gradients can be calculated using automatic differentiation.
+8	C	A computation graph represents the operations and dependencies connecting inputs to outputs. PyTorch uses this graph during backpropagation.
+9	A	.backward() computes gradients through the computation graph. An optimizer is responsible for subsequently updating model parameters.
+10	C	torch.no_grad() temporarily disables gradient tracking, commonly during model evaluation or inference.
+11	B	GPUs are designed to perform large numbers of numerical operations in parallel, making them useful for tensor computations and neural network training.
+12	A	nn.Module is the base class used to define PyTorch neural network models, including their layers and forward computations.
+13	B	Nonlinear activation functions such as Tanh allow neural networks to learn relationships that cannot be represented by a single linear transformation.
+14	A	A loss function quantifies prediction error, providing the objective that the model attempts to minimize during training.
+15	C	SGD uses gradients to update model parameters in a direction intended to reduce the loss.

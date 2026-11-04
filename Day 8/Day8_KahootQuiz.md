@@ -1,4 +1,4 @@
-## Lesson 8: Intro to PyTorch Quiz
+## Lesson 8: Intro to PyTorch Quiz 
 
 ### Multiple Choice Questions
 1. What is a tensor in PyTorch?

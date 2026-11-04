@@ -1,7 +1,9 @@
 Short Answer Questions
 
 1. What is the difference between a prior probability and a posterior probability in Bayesian statistics, and how does new evidence affect them?
+
 2.Explain how data is represented in Scikit-Learn for machine learning tasks, distinguishing between the feature matrix and the target vector.
+
 3. Describe the three primary steps (phases) in the life cycle of an Estimator object in Scikit-Learn when performing a supervised learning task.
 
 ** Solution Key ** 

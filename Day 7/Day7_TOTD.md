@@ -1,11 +1,12 @@
-**Questions **
+Short Answer Questions
 
 1.Explain how data is represented in Scikit-Learn for machine learning tasks, distinguishing between the feature matrix and the target vector.
 2. Describe the three primary steps (phases) in the life cycle of an Estimator object in Scikit-Learn when performing a supervised learning task.
+3. What is a PyTorch Tensor, and how does it differ from a standard Python list or NumPy array in the context of deep learning?
 
 ** Solution Key ** 
 
-- Explain how data is represented in Scikit-Learn for machine learning tasks, distinguishing between the feature matrix and the target vector.  
+1. Explain how data is represented in Scikit-Learn for machine learning tasks, distinguishing between the feature matrix and the target vector.  
 
    In Scikit-Learn, data is typically thought of as a table or a two-dimensional array.
   - The **feature matrix** (often denoted as X) is a 2D array where each row represents a single observation or sample, and each column represents a specific feature or attribute of that observation. All features for a given observation are contained in one row.
@@ -13,7 +14,7 @@
         This tabular representation is consistent across almost all models in Scikit-Learn.
 
 
-- Describe the three primary steps (phases) in the life cycle of an Estimator object in Scikit-Learn when performing a supervised learning task.  
+2. Describe the three primary steps (phases) in the life cycle of an Estimator object in Scikit-Learn when performing a supervised learning task.  
 
   The three primary steps in the life cycle of an Estimator object in Scikit-Learn are:
   - **1\. Choose a model/class:** This involves selecting the appropriate Estimator class for the task at hand (e.g., sklearn.naive_bayes.GaussianNB for classification).
@@ -21,29 +22,10 @@
   - 3\. Fit the model to data: Use the fit() method to train the model on the training data (feature matrix X and target vector y). During this step, the model learns the relationships between the features and the targets.  
         After fitting, the model can then be used for predict() on new data.
 
-- What is a PyTorch Tensor, and how does it differ from a standard Python list or NumPy array in the context of deep learning?  
+3. What is a PyTorch Tensor, and how does it differ from a standard Python list or NumPy array in the context of deep learning?  
 
    A PyTorch Tensor is the fundamental data structure in PyTorch, analogous to NumPy arrays, but with crucial differences that make them suitable for deep learning.
- - **Key Differences:**
+  - **Key Differences:**
     - **GPU Acceleration:** Tensors can seamlessly be moved to and operated on GPUs (Graphics Processing Units), which significantly speeds up numerical computations essential for training large neural networks. Standard Python lists and NumPy arrays are primarily CPU-bound.
     - **Automatic Differentiation (Autograd):** Tensors have a built-in mechanism (.requires_grad) to track the history of operations performed on them. This allows PyTorch to automatically compute gradients for backpropagation, which is the core algorithm for optimizing neural networks. NumPy arrays do not have this automatic differentiation capability.
     - **Dynamic Computation Graph:** PyTorch builds a dynamic computational graph, meaning the graph is built on the fly as operations are performed. This flexibility allows for more complex and dynamic network architectures compared to static graph frameworks.
-- Explain the concept of automatic differentiation (Autograd) in PyTorch. Why is it crucial for training neural networks?  
-    Automatic differentiation (Autograd) in PyTorch is a powerful mechanism that automatically computes gradients for all operations performed on Tensors. When requires_grad=True is set for a Tensor, PyTorch keeps track of the operations applied to it, forming a computational graph.
-  - When the .backward() method is called on a scalar loss value, Autograd traverses this graph backward, calculating the gradient of the loss with respect to all Tensors that have requires_grad=True. These gradients are then accumulated in the .grad attribute of the respective Tensors.
-  - **Crucial for Neural Networks:** Autograd is crucial for training neural networks because training involves minimizing a loss function. Optimization algorithms (like Stochastic Gradient Descent) require knowing the gradient of the loss function with respect to each model parameter (weights and biases). Manually computing these gradients for complex neural networks would be mathematically intricate and computationally prohibitive. Autograd automates this process, making it feasible and efficient to train deep learning models.
-- Outline the basic training loop steps for a neural network in PyTorch, focusing on the forward pass, backward pass, and optimizer step.  
-    A basic training loop for a neural network in PyTorch typically involves these steps:
-  - **1\. Forward Pass:**
-    - Input data is fed through the neural network.
-    - The network performs computations (matrix multiplications, activations, etc.) on the input data, layer by layer, to produce output predictions.
-  - **2\. Calculate Loss:**
-    - The predicted outputs from the forward pass are compared to the actual target labels using a chosen loss function (e.g., Mean Squared Error for regression, Cross-Entropy Loss for classification).
-    - This calculates a scalar value representing how "wrong" the model's predictions are.
-  - **3\. Backward Pass (Backpropagation):**
-    - The .backward() method is called on the calculated loss.
-    - PyTorch's Autograd mechanism then automatically computes the gradients of the loss with respect to all trainable parameters (weights and biases) in the network. These gradients indicate the direction and magnitude by which the parameters should be adjusted to reduce the loss.
-  - **4\. Optimizer Step:**
-    - An optimizer (e.g., SGD, Adam) uses the computed gradients to update the model's parameters.
-    - The optimizer adjusts the weights and biases in the direction that minimizes the loss function, effectively making the model's predictions more accurate in subsequent iterations.
-    - Before the next iteration, the gradients are typically zeroed out (optimizer.zero_grad()) to prevent accumulation from previous passes.

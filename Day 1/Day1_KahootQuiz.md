@@ -56,6 +56,21 @@
     b) A mechanism for performing operations on arrays of different shapes. 
     c) A way to print array elements to the console.  
     d) A function for converting arrays to lists.
+
+
+11. Which NumPy function is used to create an array filled with zeros?  
+    a) np.empty()  
+    b) np.one()  
+    c) np.zeros()  
+    d) np.fill_zeros()
+
+12. What does the .head() method typically display when applied to a Pandas DataFrame?  
+    a) The last 5 rows of the DataFrame.  
+    b) The first 5 rows of the DataFrame.  
+    c) A summary of the DataFrame's columns.  
+    d) The data types of each column.
+
+
   
 **Solution Key**
 
@@ -71,4 +86,7 @@
 8. c) ndarray
 9. c) NumPy arrays are more memory-efficient and faster for numerical computations.
 10. b) A mechanism for performing operations on arrays of different shapes.
+11. c) np.zeros()
+12. b) The first 5 rows of the DataFrame.
+13. 
 

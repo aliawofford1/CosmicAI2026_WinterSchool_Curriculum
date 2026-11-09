@@ -72,13 +72,10 @@
 
 13. What does the .unique() method do in Pandas?
 
-a) Counts the number of missing values in a column.
-
-b) Returns the distinct values in a column, excluding duplicates.
-
-c) Sorts the values in a column in ascending order.
-
-d) Removes duplicate rows from a DataFrame.
+    a) Counts the number of missing values in a column.
+    b) Returns the distinct values in a column, excluding duplicates.
+    c) Sorts the values in a column in ascending order.
+    d) Removes duplicate rows from a DataFrame.
 
 14.What is the output of the following NumPy code?
 
@@ -88,14 +85,21 @@ arr = np.array([10, 20, 30, 40, 50])
 print(arr[1:4])
 
 a) [10, 20, 30, 40]
-
 b) [20, 30, 40]
-
 c) [20, 30, 40, 50]
-
 d) [10, 20, 30]
 
+15.What is the output of the following NumPy code?
 
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+print(np.mean(arr))
+
+a) 150
+b) 50
+c) 30.0
+d) 10
 
   
 **Solution Key**
@@ -116,5 +120,5 @@ d) [10, 20, 30]
 12. b) The first 5 rows of the DataFrame.
 13. b) Returns the distinct values in a column, excluding duplicates.
 14. b) [20, 30, 40]
-15. 
+15. c) 30.0
 

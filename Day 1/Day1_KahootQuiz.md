@@ -70,6 +70,16 @@
     c) A summary of the DataFrame's columns.  
     d) The data types of each column.
 
+13. What does the .unique() method do in Pandas?
+
+a) Counts the number of missing values in a column.
+
+b) Returns the distinct values in a column, excluding duplicates.
+
+c) Sorts the values in a column in ascending order.
+
+d) Removes duplicate rows from a DataFrame.
+
 
   
 **Solution Key**
@@ -88,5 +98,6 @@
 10. b) A mechanism for performing operations on arrays of different shapes.
 11. c) np.zeros()
 12. b) The first 5 rows of the DataFrame.
-13. 
+13. b) Returns the distinct values in a column, excluding duplicates.
+14. 
 
